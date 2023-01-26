@@ -14,36 +14,65 @@
             integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
             crossorigin="anonymous"></script>
 
-    <title>Akryle</title>
+    <title>Akcesoria</title>
 </head>
 <body>
 
 <div id="produkty">
-    <h2>Podstawowe produkty do wykonania paznokci hybrydowych</h2>
-    <h4>TOPOWE PRODUKTY</h4>
-    <div class="flex-container items">
-        <div class="item"><img src="./img/akcesoria1.jpg" onclick="lakierHybrydowy()"/> <span>lakier hybrydowy</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/akcesoria2.jpg" onclick="pilniki()"/> <span>Pilnik o gradacji 180/240</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/akcesoria3.jpg" onclick="bloczki()"/> <span>Bloczek polerski</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/akcesoria4.jpg" onclick="cazki()"/> <span>Cążki 3mm</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/akcesoria5.jpg" onclick="topy()"/> <span>Top no wipe</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/akcesoria6.jpg" onclick="topy()"/> <span>Top no wipe</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-    </div>
-    <p id="opis"></p>
-    <button style="background:#3630a3;color:white;" onclick="powrot()">Powrót do strony głównej</button>
-</div>
+    <h2 style="text-align: center; margin-top: 20px">Wybierz produkt</h2>
+    <div class="flex-container">
+        <div class="row align-items-center">
 
+            <div class="obraz">
+                <figure>
+                    <img src="./img/akcesoria1.jpg" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center">lakier hybrydowy</figcaption>
+                    <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
+                </figure>
+            </div>
+            <div class="obraz">
+                <figure>
+                    <img src="./img/akcesoria2.jpg" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center">Pilnik o gradacji 180/240</figcaption>
+                    <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
+                </figure>
+            </div>
+            <div class="obraz">
+                <figure>
+                    <img src="./img/akcesoria3.jpg" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center">Bloczek polerski</figcaption>
+                    <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
+                </figure>
+            </div>
+            <div class="obraz">
+                <figure>
+                    <img src="./img/akcesoria4.jpg" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center">Cążki 3mm</figcaption>
+                    <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
+                </figure>
+            </div>
+            <div class="obraz">
+                <figure>
+                    <img src="./img/akcesoria5.jpg" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center">Top no wipe</figcaption>
+                    <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
+                </figure>
+            </div>
+            <div class="obraz">
+                <figure>
+                    <img src="./img/akcesoria6.jpg" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center">Top no wipe</figcaption>
+                    <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
+                </figure>
+            </div>
+        </div>
+        <p id="opis"></p>
+        <!--    <button style="background:#3630a3;color:white;display: block; margin: auto; margin-top: 60px; margin-bottom: 20px">Powrót do strony głównej</button>-->
+    </div>
+    <button class="btn" style="background:#3630a3; color:white; display: block; margin: auto; margin-top: 60px;
+    margin-bottom: 20px; border: 2px solid black">
+    <a th:href="@{'/back'}" style="color: white">Powrót do strony głównej</a>
+</button>
+</div>
 </body>
 </html>
