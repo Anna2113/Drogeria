@@ -11,4 +11,18 @@ public class Controller {
     public String app(){
         return "index.html";
     }
+
+    @GetMapping("/naszeLakiery")
+    public String lakiery(){
+        return "lakiery.html";
+    }
+
+    @GetMapping("/naszeZele")
+    public String zele(){
+        return "zele.html";
+    }
+    @GetMapping("/naszeAkcesoria")
+    public String akcesoria(){
+        return "akcesoria.html";
+    }
 }
