@@ -21,8 +21,8 @@ public class Controller {
     public String zele(){
         return "zele.html";
     }
-    @GetMapping("/naszeAkryle")
-    public String akryle(){
-        return "akryle.html";
+    @GetMapping("/naszeAkcesoria")
+    public String akcesoria(){
+        return "akcesoria.html";
     }
 }

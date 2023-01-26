@@ -1,3 +1,36 @@
 body{
     background-color: lightpink;
 }
+#stylizacje {
+    background-image: url("./img/tlo5.jpg");
+    height: 1000px;
+    width: 1200px;
+    padding-top: 70px;
+    align-items: center;
+    margin: 0px auto;
+    color: white;
+}
+
+.stylizacje1 {
+    padding: 10px;
+    margin: 5px 20px;
+    flex-basis: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+
+    background-color: pink;
+    color: black;
+    text-align: center;}
+
