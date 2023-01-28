@@ -28,8 +28,11 @@
 <!--                    <img src="./img/akcesoria1.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/akcesoria1.jpg}" style="width: 100%; height: 100%"/>
                     <figcaption style="text-align: center">lakier hybrydowy</figcaption>
-                    <button style="background:#3630a3;color:white; display: block; margin: auto">
-                        <a th:href="@{'/addLakier/' + '18'}">Dodaj do koszyka</a></button>
+                    <<form th:action="@{addAkcesoria}">
+                    <input type="number" name="quantity">
+                    <input type="hidden" name="productId" value="101">
+                    <input type="submit" style="background:#3630a3;color:white; display: block; margin: auto" value="Dodaj do koszyka">
+                </form>
                 </figure>
             </div>
             <div class="obraz">

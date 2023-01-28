@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twoje zamówienie</title>
+</head>
+<body>
+<form th:action="@{/makeOrder}" method="post">
+    <h4>Dane kontaktowe</h4>
+    <input type="text" name="firstName" placeholder="Imie"><br>
+    <input type="text" name="lastName" placeholder="Nazwisko"><br>
+    <input type="text" name="email" placeholder="Email"><br>
+    <input type="text" name="numberOfPhone" placeholder="Numer telefonu"><br>
+    <h4>Adres</h4>
+    <input type="text" name="city" placeholder="Miasto"><br>
+    <input type="text" name="street" placeholder="Ulica"><br>
+    <input type="text" name="number" placeholder="Numer"><br>
+    <input type="text" name="postcode" placeholder="Kod pocztowy"><br>
+    <input type="text" name="postcodeOfCity" placeholder="Kod pocztowy - miasto"><br>
+    <h4>Zawartość koszyka</h4>
+    <div th:each="item: ${shoopingCart.items}">
+        <figcaption style="text-align: center" th:text="${item.product.name}"></figcaption>
+        <figcaption style="text-align: center" th:text="${item.quantity}"></figcaption>
+    </div>
+    <input type="submit" value="Zamów">
+</form>
+</body>
+</html>

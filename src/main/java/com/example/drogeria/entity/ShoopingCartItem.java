@@ -26,8 +26,8 @@ public class ShoopingCartItem {
     @JoinColumn(name = "PRODUCT_ID")
     private Product product;
 
-    public ShoopingCartItem(Product product) {
+    public ShoopingCartItem(Product product, Integer quantity) {
         this.product = product;
-        this.quantity = 1;
+        this.quantity = quantity;
     }
 }

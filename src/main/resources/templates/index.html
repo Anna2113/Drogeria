@@ -102,6 +102,9 @@
                     <div th:each="item: ${shoopingCart.items}">
                         <figcaption style="text-align: center" th:text="${item.product.name}"></figcaption>
                         <figcaption style="text-align: center" th:text="${item.quantity}"></figcaption>
+                        <button style="background:#3630a3;color:white;display: block; margin: auto">
+                            <a th:href="@{/summary}">Przejdź do podsumowania</a>
+                        </button>
                     </div>
                 </div>
             </div>
