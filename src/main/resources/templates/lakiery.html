@@ -23,9 +23,11 @@
         <div class="row align-items-center">
             <div class="obraz">
                 <figure>
-                    <img src="./img/lakier1a.jpg" style="width: 100%; height: 100%"/>
+<!--                    <img src="./img/lakier1a.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/lakier1a.jpg}" style="width: 100%; height: 100%"/>
                     <figcaption style="text-align: center">Lakier hybrydowy Nr 1</figcaption>
-                    <button style="background:#3630a3;color:white; display: block; margin: auto"><a th:href="@{'/addLakier/' + '100'}">Dodaj do koszyka</a></button>
+                    <button style="background:#3630a3;color:white; display: block; margin: auto">
+                        <a th:href="@{'/addLakier/' + '1'}">Dodaj do koszyka</a></button>
                 </figure>
             </div>
             <div class="obraz">
