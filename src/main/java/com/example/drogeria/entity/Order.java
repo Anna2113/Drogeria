@@ -38,4 +38,7 @@ public class Order {
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Client client;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @JoinColumn(name = "shoopingCart_id", referencedColumnName = "id")
+    private ShoopingCart shoopingCart;
 }

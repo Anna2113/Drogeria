@@ -99,6 +99,10 @@
                 </div>
                 <div class="tab-pane fade" id="card">
                     <h4>Twój koszyk</h4>
+                    <div th:each="item: ${shoopingCart.items}">
+                        <figcaption style="text-align: center" th:text="${item.product.name}"></figcaption>
+                        <figcaption style="text-align: center" th:text="${item.quantity}"></figcaption>
+                    </div>
                 </div>
             </div>
         </div>
