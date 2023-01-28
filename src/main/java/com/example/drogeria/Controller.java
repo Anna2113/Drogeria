@@ -95,6 +95,7 @@ public class Controller {
     public String makeOrder(Model model, OrderDto dto) {
         Order order = orderService.saveOrder(orderMapper.mapOrder(dto, shoopingCart));
         model.addAttribute("order", order);
+        shoopingCart = new ShoopingCart();
         return "podziekowanie.html";
     }
 
