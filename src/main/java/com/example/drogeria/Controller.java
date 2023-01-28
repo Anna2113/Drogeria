@@ -59,4 +59,6 @@ public class Controller {
         model.addAttribute("shoopingCart", shoopingCart);
         return "lakiery.html";
     }
+
+
 }

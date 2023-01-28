@@ -24,14 +24,17 @@
         <div class="row align-items-center">
             <div class="obraz">
                 <figure>
-                    <img src="./img/zel1.jpg" style="width: 100%; height: 100%"/>
+<!--                    <img src="./img/zel1.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/zel1.jpg}" style="width: 100%; height: 100%"/>
                     <figcaption style="text-align: center">lakier hybrydowy</figcaption>
-                    <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
+                    <button style="background:#3630a3;color:white; display: block; margin: auto">
+                        <a th:href="@{'/addLakier/' + '11'}">Dodaj do koszyka</a></button>
                 </figure>
             </div>
             <div class="obraz">
                 <figure>
-                    <img src="./img/zel2.jpg" style="width: 100%; height: 100%"/>
+<!--                    <img src="./img/zel2.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/zel2.jpg}" style="width: 100%; height: 100%"/>
                     <figcaption style="text-align: center">Pilnik o gradacji 180/240</figcaption>
                     <button style="background:#3630a3;color:white;display:block; margin: auto" onclick="dodaj()">Dodaj do koszyka</button>
                 </figure>
@@ -39,14 +42,16 @@
             </div>
             <div class="obraz">
                 <figure>
-                    <img src="./img/zel3.jpg" style="width: 100%; height: 100%"/>
+<!--                    <img src="./img/zel3.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/zel3.jpg}" style="width: 100%; height: 100%"/>
                     <figcaption style="text-align: center">Bloczek polerski</figcaption>
                     <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
                 </figure>
             </div>
             <div class="obraz">
                 <figure>
-                    <img src="./img/zel4.jpg" style="width: 100%; height: 100%"/>
+<!--                    <img src="./img/zel4.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/zel4.jpg}" style="width: 100%; height: 100%"/>
                     <figcaption style="text-align: center">Cążki 3mm</figcaption>
                     <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
                 </figure>
@@ -55,14 +60,16 @@
         <div class="row align-items-center">
             <div class="obraz">
                 <figure>
-                    <img src="./img/zel5.jpg" style="width: 100%; height: 100%"/>
+<!--                    <img src="./img/zel5.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/zel5.jpg}" style="width: 100%; height: 100%"/>
                     <figcaption style="text-align: center">Top no wipe</figcaption>
                     <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
                 </figure>
             </div>
             <div class="obraz">
                 <figure>
-                    <img src="./img/zel6.jpg" style="width: 100%; height: 100%"/>
+<!--                    <img src="./img/zel6.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/zel6.jpg}" style="width: 100%; height: 100%"/>
                     <figcaption style="text-align: center">Top no wipe</figcaption>
                     <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
                 </figure>
