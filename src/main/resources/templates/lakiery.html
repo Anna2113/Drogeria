@@ -25,11 +25,11 @@
                 <figure>
 <!--                    <img src="./img/lakier1a.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/lakier1a.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Lakier hybrydowy Nr 1</figcaption>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 1</figcaption>
                     <form th:action="@{addLakier}">
-                        <input type="number" name="quantity">
-                        <input type="hidden" name="productId" value="100">
-                        <input type="submit" style="background:#3630a3;color:white; display: block; margin: auto" value="Dodaj do koszyka">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="1">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
                     </form>
                 </figure>
             </div>
@@ -37,11 +37,11 @@
                 <figure>
 <!--                    <img src="./img/lakier2a.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/lakier2a.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Lakier hybrydowy Nr 2</figcaption>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 2</figcaption>
                     <form th:action="@{addLakier}">
-                        <input type="number" name="quantity">
-                        <input type="hidden" name="productId" value="101">
-                        <input type="submit" style="background:#3630a3;color:white; display: block; margin: auto" value="Dodaj do koszyka">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="2">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
                     </form>
                 </figure>
             </div>
@@ -49,8 +49,12 @@
                 <figure>
 <!--                    <img src="./img/lakier3.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/lakier3.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Lakier hybrydowy Nr 3</figcaption>
-                    <button style="background:#3630a3;color:white;display: block; margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 3</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="3">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
 
             </div>
@@ -58,8 +62,12 @@
                 <figure>
 <!--                    <img src="./img/lakier4.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/lakier4.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Lakier hybrydowy Nr 4</figcaption>
-                    <button style="background:#3630a3;color:white; display: block; margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 4</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="4">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
             </div>
         </div>
@@ -68,24 +76,36 @@
                 <figure>
 <!--                    <img src="./img/lakier5.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/lakier5.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center;">Lakier hybrydowy Nr 5</figcaption>
-                    <button style="background:#3630a3;color:white; display: block; margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 5</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="5">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
             </div>
             <div class="obraz">
                 <figure>
 <!--                    <img src="./img/lakier6.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/lakier6.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Lakier hybrydowy Nr 6</figcaption>
-                    <button style="background:#3630a3;color:white;display: block;margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 6</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="6">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
             </div>
             <div class="obraz">
                 <figure>
 <!--                    <img src="./img/lakier7.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/lakier7.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Lakier hybrydowy Nr 7</figcaption>
-                    <button style="background:#3630a3;color:white; display: block;margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 7</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="7">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
 
             </div>
@@ -93,8 +113,12 @@
                 <figure>
 <!--                    <img src="./img/lakier8.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/lakier8.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Lakier hybrydowy Nr 8</figcaption>
-                    <button style="background:#3630a3;color:white;display: block; margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 8</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="8">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
             </div>
         </div>
@@ -103,16 +127,24 @@
                 <figure>
 <!--                    <img src="./img/lakier9.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/lakier9.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption>Lakier hybrydowy Nr 9</figcaption>
-                    <button style="background:#3630a3;color:white;display: block; margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 9</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="9">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
             </div>
             <div class="obraz">
                 <figure>
 <!--                    <img src="./img/lakier10.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/lakier10.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Lakier hybrydowy Nr 10</figcaption>
-                    <button style="background:#3630a3;color:white; display: block; margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 10</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="10">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
             </div>
         </div>

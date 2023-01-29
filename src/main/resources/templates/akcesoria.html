@@ -25,54 +25,74 @@
 
             <div class="obraz">
                 <figure>
-<!--                    <img src="./img/akcesoria1.jpg" style="width: 100%; height: 100%"/>-->
+                    <!--                    <img src="./img/akcesoria1.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/akcesoria1.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">lakier hybrydowy</figcaption>
-                    <<form th:action="@{addAkcesoria}">
-                    <input type="number" name="quantity">
-                    <input type="hidden" name="productId" value="101">
-                    <input type="submit" style="background:#3630a3;color:white; display: block; margin: auto" value="Dodaj do koszyka">
-                </form>
+                    <figcaption style="text-align: center; margin-top: 5px">lakier hybrydowy</figcaption>
+                    <form th:action="@{addAkcesoria}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="17">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
             </div>
             <div class="obraz">
                 <figure>
-<!--                    <img src="./img/akcesoria2.jpg" style="width: 100%; height: 100%"/>-->
+                    <!--                    <img src="./img/akcesoria2.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/akcesoria2.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Pilnik o gradacji 180/240</figcaption>
-                    <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Pilnik o gradacji 180/240</figcaption>
+                    <form th:action="@{addAkcesoria}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="18">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
             </div>
             <div class="obraz">
                 <figure>
-<!--                    <img src="./img/akcesoria3.jpg" style="width: 100%; height: 100%"/>-->
+                    <!--                    <img src="./img/akcesoria3.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/akcesoria3.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Bloczek polerski</figcaption>
-                    <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Bloczek polerski</figcaption>
+                    <form th:action="@{addAkcesoria}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="19">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
             </div>
             <div class="obraz">
                 <figure>
-<!--                    <img src="./img/akcesoria4.jpg" style="width: 100%; height: 100%"/>-->
+                    <!--                    <img src="./img/akcesoria4.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/akcesoria4.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Cążki 3mm</figcaption>
-                    <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Cążki 3mm</figcaption>
+                    <form th:action="@{addAkcesoria}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="20">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
             </div>
             <div class="obraz">
                 <figure>
-<!--                    <img src="./img/akcesoria5.jpg" style="width: 100%; height: 100%"/>-->
+                    <!--                    <img src="./img/akcesoria5.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/akcesoria5.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Top no wipe</figcaption>
-                    <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Top no wipe</figcaption>
+                    <form th:action="@{addAkcesoria}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="21">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
             </div>
             <div class="obraz">
                 <figure>
-<!--                    <img src="./img/akcesoria6.jpg" style="width: 100%; height: 100%"/>-->
+                    <!--                    <img src="./img/akcesoria6.jpg" style="width: 100%; height: 100%"/>-->
                     <img th:src="@{/img/akcesoria6.jpg}" style="width: 100%; height: 100%"/>
-                    <figcaption style="text-align: center">Top no wipe</figcaption>
-                    <button style="background:#3630a3;color:white;display:block; margin: auto">Dodaj do koszyka</button>
+                    <figcaption style="text-align: center; margin-top: 5px">Top no wipe</figcaption>
+                    <form th:action="@{addAkcesoria}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="22">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
                 </figure>
             </div>
         </div>
@@ -81,8 +101,8 @@
     </div>
     <button class="btn" style="background:#3630a3; color:white; display: block; margin: auto; margin-top: 60px;
     margin-bottom: 20px; border: 2px solid black">
-    <a th:href="@{'/back'}" style="color: white">Powrót do strony głównej</a>
-</button>
+        <a th:href="@{'/back'}" style="color: white">Powrót do strony głównej</a>
+    </button>
 </div>
 </body>
 </html>

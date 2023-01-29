@@ -112,10 +112,10 @@ public class Controller {
         shoopingCart.getItems().forEach(item -> {
             Product product = productService.findProductById(item.getProduct().getId())
                     .orElseThrow(() -> {throw new NoSuchElementException("Nie znaleziono produktu");});
-            if (item.getQuantity() > product.getAmount()) {
+            if (item.getQuantity() > product.getIlosc()) {
                 throw new ToMuchException("Zbyt mało produktu w mgazynie");
             }
-            product.setAmount(product.getAmount() - item.getQuantity());
+            product.setIlosc(product.getIlosc() - item.getQuantity());
             productService.savePrduct(product);
         });
     }

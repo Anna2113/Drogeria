@@ -29,7 +29,6 @@ public class Product {
     private Long id;
     private String name;
     private Double price;
-    private Integer amount;
-    private String label;
+    private Integer ilosc;
 
 }
