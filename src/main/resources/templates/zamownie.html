@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!--    <link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+
+    <title>Twoje zamówienie</title>
+</head>
+<body>
+
+<h4 style="text-align: center;">Prosimy o podanie danych do zamówienia</h4>
+<div class="dane">
+    <form th:action="@{/makeOrder}" method="post">
+        <h4 style="margin-left: 100px">Dane kontaktowe</h4>
+        <input type="text" name="firstName" placeholder="Imie" class="data" pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]{1,32}"
+               required
+               oninvalid="InvalidName(this);"
+               oninput="InvalidName(this);"/><br>
+
+        <script> function InvalidName(textbox) {
+
+            if (textbox.validity.patternMismatch) {
+                textbox.setCustomValidity('Enter valid name');
+            } else if (textbox.validity.valueMissing) {
+                textbox.setCustomValidity('This field cannot be empty ');
+            } else {
+                textbox.setCustomValidity('');
+            }
+            return true;
+        }</script>
+
+        <input type="text" name="lastName" placeholder="Nazwisko" class="data"
+               pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]{1,32}"
+               required
+               oninvalid="InvalidSurname(this);"
+               oninput="InvalidSurname(this);"/><br>
+        <script> function InvalidSurname(textbox) {
+
+            if (textbox.validity.patternMismatch) {
+                textbox.setCustomValidity('Enter valid surname');
+            } else if (textbox.validity.valueMissing) {
+                textbox.setCustomValidity('This field cannot be empty ');
+            } else {
+                textbox.setCustomValidity('');
+            }
+            return true;
+        }</script>
+
+        <input type="text" name="email" placeholder="Email" class="data"
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+               required
+               oninvalid="InvalidEmail(this);"
+               oninput="InvalidEmail(this);"><br>
+        <script> function InvalidEmail(textbox) {
+
+            if (textbox.validity.patternMismatch) {
+                textbox.setCustomValidity('Enter valid email');
+            } else if (textbox.validity.valueMissing) {
+                textbox.setCustomValidity('This field cannot be empty ');
+            } else {
+                textbox.setCustomValidity('');
+            }
+            return true;
+        }</script>
+
+        <input type="text" name="numberOfPhone" placeholder="Numer telefonu" class="data" pattern="[0-9]{9}"
+               required
+               oninvalid="InvalidPhone(this);"
+               oninput="InvalidPhone(this);"><br>
+        <script> function InvalidPhone(textbox) {
+
+            if (textbox.validity.patternMismatch) {
+                textbox.setCustomValidity('Enter valid number phone');
+            } else if (textbox.validity.valueMissing) {
+                textbox.setCustomValidity('This field cannot be empty ');
+            } else {
+                textbox.setCustomValidity('');
+            }
+            return true;
+        }</script>
+
+        <hr>
+        <h4 style="margin-left: 100px">Adres</h4>
+        <input type="text" name="city" placeholder="Miasto" class="data"
+               pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]{1,32}"
+               required
+               oninvalid="InvalidAddress(this);"
+               oninput="InvalidAddress(this);"><br>
+        <script> function InvalidAddress(textbox) {
+
+            if (textbox.validity.patternMismatch) {
+                textbox.setCustomValidity('Enter valid address');
+            } else if (textbox.validity.valueMissing) {
+                textbox.setCustomValidity('This field cannot be empty ');
+            } else {
+                textbox.setCustomValidity('');
+            }
+            return true;
+        }</script>
+
+        <input type="text" name="street" placeholder="Ulica" class="data"
+               pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]{1,32}"
+               required
+               oninvalid="InvalidStreet(this);"
+               oninput="InvalidStreet(this);"><br>
+        <script> function InvalidStreet(textbox) {
+
+            if (textbox.validity.patternMismatch) {
+                textbox.setCustomValidity('Enter valid street');
+            } else if (textbox.validity.valueMissing) {
+                textbox.setCustomValidity('This field cannot be empty ');
+            } else {
+                textbox.setCustomValidity('');
+            }
+            return true;
+        }</script>
+
+        <input type="text" name="number" placeholder="Numer" class="data"
+               pattern="([0-9]{1,3})([a-zA-Z]{0,1})(\/([0-9]{1,3})([a-zA-Z]{0,1})?)?"
+               required
+               oninvalid="InvalidNumber(this);"
+               oninput="InvalidNumber(this);"/><br>
+
+        <script> function InvalidNumber(textbox) {
+
+            if (textbox.validity.patternMismatch) {
+                textbox.setCustomValidity('Enter valid number');
+            } else if (textbox.validity.valueMissing) {
+                textbox.setCustomValidity('This field cannot be empty ');
+            } else {
+                textbox.setCustomValidity('');
+            }
+            return true;
+        }</script>
+
+        <input type="text" name="postcode" placeholder="Kod pocztowy" class="data"
+               pattern="[0-9]{2}-[0-9]{3}"
+               required
+               oninvalid="InvalidPostcode(this);"
+               oninput="InvalidPostcode(this);"><br>
+        <script> function InvalidPostcode(textbox) {
+
+            if (textbox.validity.patternMismatch) {
+                textbox.setCustomValidity('Enter valid street');
+            } else if (textbox.validity.valueMissing) {
+                textbox.setCustomValidity('This field cannot be empty ');
+            } else {
+                textbox.setCustomValidity('');
+            }
+            return true;
+        }</script>
+        
+        <hr>
+        <h4 style="margin-left: 100px">Zawartość koszyka</h4>
+        <div style="width:1000px; margin-left: 100px">
+            <table class="table">
+                <th class="firstTh">Nazwa</th>
+                <th class="firstTh">Ilość</th>
+                <tr th:each="item: ${shoopingCart.items}" class="firstTr">
+                    <td th:text="${item.product.name}" class="firstTd"/>
+                    <td th:text="${item.quantity}" class="firstTd"/>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <h4 style="margin-left: 100px">Czy chcesz złożyć swoje zamówienie ?</h4>
+        <input type="submit" value="Zamów" class="data btn">
+        <button class="data btn">
+            <a th:href="@{/cancel}" style="color:white">Anuluj</a>
+        </button>
+    </form>
+</div>
+<footer style="color: black; position: relative;left: 0;bottom: 0; margin-top: 30px">
+    <h5>Copyright by Aleksandra Wesołowska, Marcin Szkałuba, Anna Kozak :)</h5>
+</footer>
+</body>
+</html>

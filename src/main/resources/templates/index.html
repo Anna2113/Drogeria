@@ -20,24 +20,19 @@
     <title>Drogeria</title>
 </head>
 <body>
-<div class="container-fluid" id="tytul">
-    <h1>Drogeria kosmetyczna</h1>
+<h1 style="text-align: center; margin-top: 20px; margin-bottom: 20px">Drogeria kosmetyczna</h1>
+<div class="container-fluid container">
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner ">
+        <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block" style="width:20%" src="./img/zestaw1.jpg" alt="First slide">
+                <img class="d-block" src="./img/zestaw1.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block" style="width:20%" src="./img/zestaw2.jpg" alt="Second slide">
+                <img class="d-block" src="./img/zestaw2.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block" style="width:20%" src="./img/zestaw3.jpg" alt="Third slide">
+                <img class="d-block" src="./img/zestaw3.jpg" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -57,54 +52,68 @@
 <div class="container">
     <div class="row">
 
-        <div class="col-sm-8" style="margin-top:100px">
-            <ul class="nav nav-tabs" id="wersalTabs">
+        <div class="col-sm-8" style="margin-top:50px">
+            <ul class="nav nav-tabs" id="productsTabs">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#products" data-toggle="tab">Produkty</a>
+                    <a class="nav-link active" href="#products" data-toggle="tab" style="color: black">Produkty</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#orders" data-toggle="tab">Zamówienia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#card" data-toggle="tab">Koszyk</a>
+                    <a class="nav-link " href="#card" data-toggle="tab" style="color: black">Koszyk</a>
                 </li>
             </ul>
-            <div class="tab-content" id="wersalContent">
+            <div class="tab-content" id="productsContent">
                 <div class="tab-pane fade show active" id="products">
                     <div id="stylizacje">
-                        <h2 style="color:black">Wybierz kategorię, którą chcesz przejrzeć</h2>
+                        <h1 style="color:black; text-align: center">Wybierz kategorię, którą chcesz przejrzeć</h1>
                         <div class="flex-container stylizacje">
-                            <div class="stylizacje1">
-                                <a th:href="@{/naszeLakiery}"><img src="./img/lakier3.jpg"
-                                                                   style="width:100%;height:100%;"></a>
-                            </div>
-                            <div class="stylizacje1">
-                                <a th:href="@{/naszeZele}"><img src="./img/zel2.jpg"
-                                                                style="width:100%;height:100%;"></a>
-                            </div>
-                            <div class="stylizacje1">
-
-                                <a th:href="@{/naszeAkcesoria}"><img src="./img/akcesoria2.jpg"
-                                                                     style="width:100%;height:100%;"></a>
-
+                            <div class="row align-items-center">
+                                <div class="col stylizacje1">
+                                    <a th:href="@{/naszeLakiery}"><img src="./img/lakier3.jpg"
+                                                                       style="width:100%;height:100%;"></a>
+                                </div>
+                                <div class="col stylizacje1">
+                                    <a th:href="@{/naszeZele}"><img src="./img/zel2.jpg"
+                                                                    style="width:100%;height:100%;"></a>
+                                </div>
+                                <div class="col stylizacje1">
+                                    <a th:href="@{/naszeAkcesoria}"><img src="./img/akcesoria2.jpg"
+                                                                         style="width:100%;height:100%;"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-            <div class="tab-pane fade" id="orders">
-                <h4>Lista zamówień/Podsumowanie zakupów</h4>
+                <div class="tab-pane fade" id="card">
+                    <h4>Twój koszyk</h4>
+                    <div style="width:1000px">
+                        <table class="table">
+                            <th class="firstTh">Nazwa</th>
+                            <th class="firstTh">Ilość</th>
+                            <th class="firstTh">Wybierz</th>
+                            <tr th:each="item: ${shoopingCart.items}" class="firstTr">
+                                <td th:text="${item.product.name}" class="firstTd"/>
+                                <td th:text="${item.quantity}" class="firstTd"/>
+                                <td class="firstTd">
+                                    <button style="background:lavender">
+                                        <a th:href="@{/summary}" style="color: black">Podsumowanie</a>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--                    <div th:each="item: ${shoopingCart.items}">-->
+                    <!--                        <figcaption style="text-align: center" th:text="${item.product.name}"></figcaption>-->
+                    <!--                        <figcaption style="text-align: center" th:text="${item.quantity}"></figcaption>-->
+                    <!--                        <button style="background:#3630a3;color:white;display: block; margin: auto">-->
+                    <!--                            <a th:href="@{/summary}">Przejdź do podsumowania</a>-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                </div>
             </div>
-            <div class="tab-pane fade" id="card">
-                <h4>Twój koszyk</h4>
-            </div>
-        </div>
         </div>
     </div>
 </div>
-<footer style="color: black; position: relative;left: 0;
-    bottom: 0;">
+<footer style="color: black; position: relative;left: 0;bottom: 0; margin-top: 30px">
     <h5>Copyright by Aleksandra Wesołowska, Marcin Szkałuba, Anna Kozak :)</h5>
 </footer>
 </body>

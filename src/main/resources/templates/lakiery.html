@@ -18,44 +18,146 @@
 </head>
 <body>
 <div id="produkty">
-    <h2>Wybierz produkt</h2>
-    <div class="flex-container items">
-        <div class="item"><img src="./img/lakier1a.jpg" onclick="lakierHybrydowy()"/> <span>Lakier hybrydowy Nr 1</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
+    <h2 style="text-align: center; margin-top: 20px">Wybierz produkt</h2>
+    <div class="flex-container">
+        <div class="row align-items-center">
+            <div class="obraz">
+                <figure>
+<!--                    <img src="./img/lakier1a.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/lakier1a.jpg}" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 1</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="1">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
+                </figure>
+            </div>
+            <div class="obraz">
+                <figure>
+<!--                    <img src="./img/lakier2a.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/lakier2a.jpg}" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 2</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="2">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
+                </figure>
+            </div>
+            <div class="obraz">
+                <figure>
+<!--                    <img src="./img/lakier3.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/lakier3.jpg}" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 3</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="3">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
+                </figure>
+
+            </div>
+            <div class="obraz">
+                <figure>
+<!--                    <img src="./img/lakier4.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/lakier4.jpg}" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 4</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="4">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
+                </figure>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="obraz">
+                <figure>
+<!--                    <img src="./img/lakier5.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/lakier5.jpg}" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 5</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="5">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
+                </figure>
+            </div>
+            <div class="obraz">
+                <figure>
+<!--                    <img src="./img/lakier6.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/lakier6.jpg}" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 6</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="6">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
+                </figure>
+            </div>
+            <div class="obraz">
+                <figure>
+<!--                    <img src="./img/lakier7.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/lakier7.jpg}" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 7</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="7">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
+                </figure>
+
+            </div>
+            <div class="obraz">
+                <figure>
+<!--                    <img src="./img/lakier8.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/lakier8.jpg}" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 8</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="8">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
+                </figure>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="obraz">
+                <figure>
+<!--                    <img src="./img/lakier9.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/lakier9.jpg}" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 9</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="9">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
+                </figure>
+            </div>
+            <div class="obraz">
+                <figure>
+<!--                    <img src="./img/lakier10.jpg" style="width: 100%; height: 100%"/>-->
+                    <img th:src="@{/img/lakier10.jpg}" style="width: 100%; height: 100%"/>
+                    <figcaption style="text-align: center; margin-top: 5px">Lakier hybrydowy Nr 10</figcaption>
+                    <form th:action="@{addLakier}">
+                        <input type="number" name="quantity" min="1" class="amount">
+                        <input type="hidden" name="productId" value="10">
+                        <input type="submit" class="btn" value="Dodaj do koszyka">
+                    </form>
+                </figure>
+            </div>
         </div>
 
-
-        <div class="item"><img src="./img/lakier2a.jpg" onclick="pilniki()"/> <span>Lakier hybrydowy Nr 2</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/lakier3.jpg" onclick="lakierHybrydowy()"/> <span>Lakier hybrydowy Nr 3</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/lakier4.jpg" onclick="pilniki()"/> <span>PLakier hybrydowy Nr 4</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/lakier5.jpg" onclick="lakierHybrydowy()"/> <span>Lakier hybrydowy Nr 5</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/lakier6.jpg" onclick="pilniki()"/> <span>Lakier hybrydowy Nr 6</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/lakier7.jpg" onclick="lakierHybrydowy()"/> <span>Lakier hybrydowy Nr 7</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/lakier8.jpg" onclick="pilniki()"/> <span>Lakier hybrydowy Nr 8</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/lakier9.jpg" onclick="lakierHybrydowy()"/> <span>Lakier hybrydowy Nr 9</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
-        <div class="item"><img src="./img/lakier10.jpg" onclick="pilniki()"/> <span>Lakier hybrydowy Nr 10</span>
-            <button style="background:#3630a3;color:white;" onclick="dodaj()">Dodaj do koszyka</button>
-        </div>
     </div>
     <p id="opis"></p>
-    <button style="background:#3630a3;color:white;" onclick="powrot()">Powrót do strony głównej</button>
+    <button class="btn" style="background:#3630a3; color:white; display: block; margin: auto; margin-top: 100px;
+    margin-bottom: 20px; border: 2px solid black">
+        <a th:href="@{'/back'}" style="color: white">Powrót do strony głównej</a>
+    </button>
 </div>
-
+<footer style="color: black; position: relative;left: 0;bottom: 0; margin-top: 30px">
+    <h5>Copyright by Aleksandra Wesołowska, Marcin Szkałuba, Anna Kozak :)</h5>
+</footer>
 </body>
 </html>
