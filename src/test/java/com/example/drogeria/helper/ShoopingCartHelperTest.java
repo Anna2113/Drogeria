@@ -49,8 +49,8 @@ class ShoopingCartHelperTest {
     static List<ShoopingCartItem> prepareShoopingCartItems() {
         List<ShoopingCartItem> items = new ArrayList<>();
 
-        ShoopingCartItem item1 = new ShoopingCartItem(new Product(1L, "lakier", 5.50, 5, "lakier"), 5);
-        ShoopingCartItem item2 = new ShoopingCartItem(new Product(2L, "żel", 15.50, 2, "żel"), 2);
+        ShoopingCartItem item1 = new ShoopingCartItem(new Product(1L, "lakier", 5.50, 5), 5);
+        ShoopingCartItem item2 = new ShoopingCartItem(new Product(2L, "żel", 15.50, 2), 2);
         items.add(item1);
         items.add(item2);
 

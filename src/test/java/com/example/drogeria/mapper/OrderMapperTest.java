@@ -35,7 +35,6 @@ class OrderMapperTest {
         assertEquals(dto.getStreet(), order.getAddress().getStreet());
         assertEquals(dto.getNumber(), order.getAddress().getNumber());
         assertEquals(dto.getPostcode(), order.getAddress().getPostcode());
-        assertEquals(dto.getPostcodeOfCity(), order.getAddress().getPostcodeOfCity());
     }
 
     static OrderDto prepareOrderDto() {
@@ -49,7 +48,6 @@ class OrderMapperTest {
         dto.setStreet("Konstantynów");
         dto.setNumber("1H");
         dto.setPostcode("20-708");
-        dto.setPostcodeOfCity("Lublin");
 
         return dto;
     }
@@ -57,8 +55,8 @@ class OrderMapperTest {
     static ShoopingCart prepareShoopingCart() {
         ShoopingCart shoopingCart = new ShoopingCart();
 
-        ShoopingCartItem item1 = new ShoopingCartItem(new Product(1L, "lakier", 5.50, 5, "lakier"), 5);
-        ShoopingCartItem item2 = new ShoopingCartItem(new Product(2L, "żel", 15.50, 2, "żel"), 2);
+        ShoopingCartItem item1 = new ShoopingCartItem(new Product(1L, "lakier", 5.50, 5), 5);
+        ShoopingCartItem item2 = new ShoopingCartItem(new Product(2L, "żel", 15.50, 2), 2);
         shoopingCart.getItems().add(item1);
         shoopingCart.getItems().add(item2);
 

@@ -34,6 +34,7 @@ public class Order {
     private Address address;
     private Double costAllProduct;
     private Integer amount;
+    @Temporal(TemporalType.DATE)
     private Date date;
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     @JoinColumn(name = "client_id", referencedColumnName = "id")

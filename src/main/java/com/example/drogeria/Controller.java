@@ -3,10 +3,7 @@ package com.example.drogeria;
 
 import com.example.drogeria.dto.OrderDto;
 import com.example.drogeria.dto.ProductDto;
-import com.example.drogeria.entity.Order;
-import com.example.drogeria.entity.Product;
-import com.example.drogeria.entity.ShoopingCart;
-import com.example.drogeria.entity.ShoopingCartItem;
+import com.example.drogeria.entity.*;
 import com.example.drogeria.exeption.ToMuchException;
 import com.example.drogeria.mapper.OrderMapper;
 import com.example.drogeria.service.OrderService;
@@ -93,12 +90,21 @@ public class Controller {
     }
 
     @PostMapping("/makeOrder")
-    public String makeOrder(Model model, OrderDto dto) {
+    public String makeOrder(Model model, OrderDto dto, Client client, Address address) {
         Order order = orderService.saveOrder(orderMapper.mapOrder(dto, shoopingCart));
         model.addAttribute("order", order);
+        model.addAttribute("client", client);
+        model.addAttribute("address", address);
         changeAmountInDatabase(shoopingCart);
         shoopingCart = new ShoopingCart();
         return "podziekowanie.html";
+    }
+
+    @GetMapping("/cancel")
+    public String cancel(Model model){
+        shoopingCart = new ShoopingCart();
+        model.addAttribute("shoopingCart", shoopingCart);
+        return "index.html";
     }
 
     private void addProductToShoopingCart(Long producyId, Integer quantity) {
@@ -119,4 +125,7 @@ public class Controller {
             productService.savePrduct(product);
         });
     }
+
+
+
 }

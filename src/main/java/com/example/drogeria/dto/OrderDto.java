@@ -14,5 +14,4 @@ public class OrderDto {
     private String street;
     private String number;
     private String postcode;
-    private String postcodeOfCity;
 }

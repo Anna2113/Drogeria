@@ -28,7 +28,6 @@ public class Address {
 
     private Long id;
     private String city;
-    private String postcodeOfCity;
     private String street;
     private String number;
     private String postcode;

@@ -5,6 +5,7 @@ import com.example.drogeria.entity.*;
 import com.example.drogeria.helper.ShoopingCartHelper;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 import java.util.List;
 
 @NoArgsConstructor
@@ -19,6 +20,7 @@ public class OrderMapper {
         order.setShoopingCart(shoopingCart);
         order.setCostAllProduct(getCostAllProducts(shoopingCart.getItems()));
         order.setAmount(getAmountOfProduts(shoopingCart.getItems()));
+        order.setDate(new Date());
         return order;
     }
 
@@ -37,7 +39,6 @@ public class OrderMapper {
         address.setStreet(dto.getStreet());
         address.setNumber(dto.getNumber());
         address.setPostcode(dto.getPostcode());
-        address.setPostcodeOfCity(dto.getPostcodeOfCity());
         return address;
     }
 
