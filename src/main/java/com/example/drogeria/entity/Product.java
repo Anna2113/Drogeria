@@ -13,7 +13,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-
 public class Product {
 
     @SequenceGenerator(

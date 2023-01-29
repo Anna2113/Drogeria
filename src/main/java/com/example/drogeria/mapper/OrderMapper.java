@@ -18,7 +18,7 @@ public class OrderMapper {
         order.setAddress(mapAddres(dto));
         order.setShoopingCart(shoopingCart);
         order.setCostAllProduct(getCostAllProducts(shoopingCart.getItems()));
-        order.setAmount(getAmountOfProdts(shoopingCart.getItems()));
+        order.setAmount(getAmountOfProduts(shoopingCart.getItems()));
         return order;
     }
 
@@ -45,7 +45,7 @@ public class OrderMapper {
         return shoopingCartHelper.getCostAllProducts(items);
     }
 
-    private Integer getAmountOfProdts(List<ShoopingCartItem> items) {
+    private Integer getAmountOfProduts(List<ShoopingCartItem> items) {
         return shoopingCartHelper.getAmountOfProdts(items);
     }
 }
