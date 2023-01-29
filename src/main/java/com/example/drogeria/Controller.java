@@ -7,6 +7,7 @@ import com.example.drogeria.entity.Order;
 import com.example.drogeria.entity.Product;
 import com.example.drogeria.entity.ShoopingCart;
 import com.example.drogeria.entity.ShoopingCartItem;
+import com.example.drogeria.exeption.ToMuchException;
 import com.example.drogeria.mapper.OrderMapper;
 import com.example.drogeria.service.OrderService;
 import com.example.drogeria.service.ProductService;
@@ -95,6 +96,7 @@ public class Controller {
     public String makeOrder(Model model, OrderDto dto) {
         Order order = orderService.saveOrder(orderMapper.mapOrder(dto, shoopingCart));
         model.addAttribute("order", order);
+        changeAmountInDatabase(shoopingCart);
         shoopingCart = new ShoopingCart();
         return "podziekowanie.html";
     }
@@ -104,5 +106,17 @@ public class Controller {
                 .orElseThrow(() -> {throw new NoSuchElementException("Nie znaleziono produktu");});
         ShoopingCartItem item = new ShoopingCartItem(product, quantity);
         shoopingCart.getItems().add(item);
+    }
+
+    private void changeAmountInDatabase(ShoopingCart shoopingCart) throws ToMuchException {
+        shoopingCart.getItems().forEach(item -> {
+            Product product = productService.findProductById(item.getProduct().getId())
+                    .orElseThrow(() -> {throw new NoSuchElementException("Nie znaleziono produktu");});
+            if (item.getQuantity() > product.getAmount()) {
+                throw new ToMuchException("Zbyt mało produktu w mgazynie");
+            }
+            product.setAmount(product.getAmount() - item.getQuantity());
+            productService.savePrduct(product);
+        });
     }
 }
